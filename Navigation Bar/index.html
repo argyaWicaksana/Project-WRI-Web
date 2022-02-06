@@ -11,14 +11,14 @@
 <body>
     
     <nav>
-        <div class="logo">
+        <div class="logo" id="Logo">
             <h4>GOLANG</h4>
         </div>
 
         <ul>
             <li><a href="#">Homepage</a></li>
-            <li><a href="#">Popular</a></li>
-            <li><a href="#">Login</a></li>
+            <li><a href="#" onclick="change('white')">Popular</a></li>
+            <li><a href="#" onclick="displaySty('block', 'aqua')">Login</a></li>
         </ul>
         
         <!-- Toggle Mobile Mode -->
@@ -29,6 +29,24 @@
             <span> </span>
         </div>
     </nav>
+    <div class="bckground" id="background">
+        <div class="login">
+            <div><img src="../login/user.png" alt=""></div>
+            <div class="form">
+                <p>Username</p>
+                <input type="text" placeholder="Enter Username">
+            </div>
+            <div class="form">
+                <p>Password</p>
+                <input type="password" placeholder="Enter password">
+            </div>
+            <div class="loginBtn"><button type="submit">Login</button></div>
+            <div class="cancel">
+                <button onclick="displaySty('none')" id="close">cancel</button>
+                <p>New here? <a href="">sign up</a></p>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

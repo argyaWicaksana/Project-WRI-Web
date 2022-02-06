@@ -6,6 +6,95 @@
 body{
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  background-color: rgb(255, 142, 37);
+  justify-content: space-around;
+  /* padding: 20px 0; */
+  color: white;
+  height: 50px;
+  align-items: center;
+}
+
+nav .logo {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+nav ul li a:hover {
+  color: black;
+}
+
+/* Menu Toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -5px;
+  top: -3;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+
+/* Animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0)
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px, -1px);
 }
 
 .b .col-12 .col-1{width: 8.33%;}
@@ -36,6 +125,9 @@ body{
 
   .populer-s h3{
     margin-bottom: 10px;
+  }
+  nav ul {
+    width: 50%;
   }
   @media only screen and (min-width: 800px) {
     .marginL{width: 8.33% ;}
@@ -69,6 +161,33 @@ body{
 }
 }
 
+/* navbar Ukuran Mobile */
+@media screen and (max-width: 576px) {
+  .menu-toggle {
+    display: flex;
+  }
+  .logo, .menu-toggle{z-index: 2;}
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80%;
+    height: 100vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 142, 37);
+    z-index: 1;
+    transform: translateX(100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 img{
   border-radius: 8px;
 }
@@ -99,7 +218,6 @@ a:hover{
   padding: 10px;
 }
 
-
 .body, .marginL{
   float: left;
 }
@@ -120,8 +238,8 @@ a:hover{
 }
 
 .margL{margin-left: 10px;}
-.margT{margin-top: 10px;}
-.margB{margin-bottom: 10px;}
+.margT{margin-top: 50px;}
+/* .margB{margin-bottom: 10px;} */
 
 .titleM{
   padding: 25px 0px 10px 0px;
@@ -181,17 +299,17 @@ a:hover{
 }
 
 .rank{
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #bbb;
-    line-height: normal;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #bbb;
+  line-height: normal;
 }
 
 .rank h1{
-    color: rgb(83, 83, 83);
-    font-size: 50px;
-    line-height: 15px;
-    opacity: 0.5;
+  color: rgb(83, 83, 83);
+  font-size: 50px;
+  line-height: 15px;
+  opacity: 0.5;
 }
 
 .rank div{
@@ -234,4 +352,74 @@ button{
 button:hover{
   background-color: rgb(255, 142, 37);
   color: white;
+}
+
+.bckground{
+  background-color: rgba(0,0,0,0.4);
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  top: 0;
+  position: fixed;
+  display: none;
+}
+
+.login{
+  text-align: center;
+  background-color: white;
+  margin: 10% auto 15% auto;
+  float: none;
+  padding: 0px;
+  border: solid 1px rgba(187, 187, 187, 0.596);
+}
+
+.form{
+  width: 200px;
+  margin: 20px auto 20px auto;
+}
+
+.form *{
+  display: block;
+  text-align: left;
+}
+
+.login img{
+  height: 100px;
+  margin-top: 40px;
+}
+
+.loginBtn{
+  width: 200px;
+  margin: 20px auto 20px auto;
+}
+
+.loginBtn button{ width: 100%; }
+
+.loginBtn button, .cancel button{
+  display: block;
+  border-radius: 0;
+  border: none;
+  padding: 5px;
+  background-color: rgb(255, 142, 37);
+  color: white;
+}
+
+.loginBtn button:hover{
+  background-color: rgb(253, 170, 92);
+}
+
+.cancel{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 14px;
+  background-color: rgba(224, 224, 224, 0.397);
+  align-items: center;
+  padding: 16px;
+}
+
+.cancel a{
+  color: rgb(221, 139, 62);
+  font-weight: bold;
+  text-decoration: underline;
 }

@@ -5,11 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="indexResp.css">
 </head>
 <body>
-    <div class="marginL" style="padding: 15px;"></div>
-   <div class="body">
+    <!-- navigation bar -->
+    <nav>
+        <div class="logo">
+            <h4>GOLANG</h4>
+        </div>
+
+        <ul>
+            <li><a href="#">Homepage</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#" onclick="displaySty('block', 'aqua')">Login</a></li>
+        </ul>
+        
+        <!-- Toggle Mobile Mode -->
+        <div class="menu-toggle">
+            <input type="checkbox" />
+            <span> </span>
+            <span> </span>
+            <span> </span>
+        </div>
+    </nav>
+
+    <!-- login -->
+    <div class="bckground" id="background">
+        <div class="login col-4 col-s-7">
+            <div><img src="../login/user.png" alt=""></div>
+            <div class="form">
+                <p>Username</p>
+                <input type="text" placeholder="Enter Username">
+            </div>
+            <div class="form">
+                <p>Password</p>
+                <input type="password" placeholder="Enter password">
+            </div>
+            <div class="loginBtn"><button type="submit">Login</button></div>
+            <div class="cancel">
+                <button onclick="displaySty('none')" id="close">cancel</button>
+                <p>New here? <a href="">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="../Navigation Bar/script.js"></script>
+
+   <!-- homepage -->
+   <div class="marginL" style="padding: 15px;"></div>
+   <div class="body margT">
        <div class="c col-7">
            <div class="a col-12">
                <a href=""><img src="image/image2.jpg" alt="" class="col-12 image1">

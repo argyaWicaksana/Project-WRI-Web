@@ -16,8 +16,8 @@
         </div>
 
         <ul>
-            <li><a href="#">Homepage</a></li>
-            <li><a href="#">Popular</a></li>
+            <li><a href="#" >Homepage</a></li>
+            <li><a href="#" onclick="change('hello')">Popular</a></li>
             <li><a href="#" onclick="displaySty('block', 'aqua')">Login</a></li>
         </ul>
         
@@ -33,19 +33,41 @@
     <!-- login -->
     <div class="bckground" id="background">
         <div class="login col-4 col-s-7">
-            <div><img src="../login/user.png" alt=""></div>
-            <div class="form">
-                <p>Username</p>
-                <input type="text" placeholder="Enter Username">
+            <div id="loginForm">
+                <div><img src="../login/user.png" alt=""></div>
+                <div class="form">
+                    <p>Username</p>
+                    <input name="plcholder" type="text" placeholder="Enter Username">
+                </div>
+                <div class="form">
+                    <p>Password</p>
+                    <input type="password" placeholder="Enter password">
+                </div>
+                <div class="loginBtn"><button type="submit">Login</button></div>
+                <div class="cancel">
+                    <button onclick="displaySty('none')">cancel</button>
+                    <p>New here? <a href="#" onclick="change(1)">Sign Up</a></p>
+                </div>
             </div>
-            <div class="form">
-                <p>Password</p>
-                <input type="password" placeholder="Enter password">
-            </div>
-            <div class="loginBtn"><button type="submit">Login</button></div>
-            <div class="cancel">
-                <button onclick="displaySty('none')" id="close">cancel</button>
-                <p>New here? <a href="">Sign Up</a></p>
+            <div id="signUpForm">
+                <div><img src="../login/user.png" alt=""></div>
+                <div class="form">
+                    <p>Email</p>
+                    <input type="email" placeholder="Enter Email">
+                </div>
+                <div class="form">
+                    <p>Password</p>
+                    <input type="password" placeholder="Enter password">
+                </div>
+                <div class="form">
+                    <p>Repeat Password</p>
+                    <input type="password" placeholder="Repeat password">
+                </div>
+                <div class="loginBtn"><button type="submit">Sign Up</button></div>
+                <div class="cancel">
+                    <button onclick="displaySty('none')">cancel</button>
+                    <p>Already have an account?<a href="#" onclick="change()">Login</a></p>
+                </div>
             </div>
         </div>
     </div>

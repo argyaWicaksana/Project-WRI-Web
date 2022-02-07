@@ -141,8 +141,9 @@ nav ul li a:hover {
     z-index: 3;
     top: 0;
     position: fixed;
-    display: none;
 }
+
+.bckground, #signUpForm{display: none;}
 
 .login{
     text-align: center;

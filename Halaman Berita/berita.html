@@ -6,8 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Halaman Berita</title>
     <link rel="stylesheet" href="berita.css">
+    <link rel="stylesheet" href="../Navigation Bar/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- navbar -->
+    <nav>
+        <div class="logo" id="Logo">
+            <h4>GOLANG</h4>
+        </div>
+
+        <ul>
+            <li><a href="../homepage/index.html">Homepage</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#" onclick="displaySty('block', 'aqua')">Login</a></li>
+        </ul>
+        <!-- Toggle Mobile Mode -->
+        <div class="menu-toggle">
+            <input type="checkbox" />
+            <span> </span>
+            <span> </span>
+            <span> </span>
+        </div>
+    </nav>
+    <div class="bckground" id="background">
+        <div class="login">
+            <div><img src="../login/user.png" alt=""></div>
+            <div class="form">
+                <p>Username</p>
+                <input type="text" placeholder="Enter Username">
+            </div>
+            <div class="form">
+                <p>Password</p>
+                <input type="password" placeholder="Enter password">
+            </div>
+            <div class="loginBtn"><button type="submit">Login</button></div>
+            <div class="cancel">
+                <button onclick="displaySty('none')" id="close">cancel</button>
+                <p>New here? <a href="">sign up</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="../Navigation Bar/script.js"></script>
      
     <div class="badan-utama">
         
@@ -16,14 +56,14 @@
             <p>Malang, 20/01/2022</p>
         </header>
  
-        <nav class="navigasi">
+        <!-- <nav class="navigasi">
             <ul>
                 <li><a class="active" href="#home">News</a></li>
                 <li><a href="#berita">Edukasi</a></li>
                 <li><a href="#kontak">Health</a></li>
                 <li><a href="#tentang">Life Style</a></li>
             </ul>
-        </nav>
+        </nav> -->
  
         <div class="banner">
             <img src="gedung.jpg" >

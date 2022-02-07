@@ -1,6 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
+.badan-utama *{
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -32,7 +30,7 @@ header h2
     font-size: 35px;
 }
  
-.navigasi ul 
+/* .navigasi ul 
 {
     list-style-type: none;
     margin: 0;
@@ -62,7 +60,7 @@ header h2
 {
     background-color:red;
     transition-duration: 2s;
-}
+} */
  
 .banner
 {
@@ -191,4 +189,3 @@ footer
     transition-duration: 2s;
 }
  
-}

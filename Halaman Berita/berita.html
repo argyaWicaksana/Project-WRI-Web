@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Halaman Berita</title>
+    <link rel="stylesheet" href="berita.css">
+    <link rel="stylesheet" href="../Navigation Bar/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- navigation bar -->
+    <nav>
+        <div class="logo">
+            <h4>GOLANG</h4>
+        </div>
+
+        <ul>
+            <li><a href="../homepage/index.html" >Homepage</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#" onclick="displaySty('block', 'aqua')">Login</a></li>
+        </ul>
+        
+        <!-- Toggle Mobile Mode -->
+        <div class="menu-toggle">
+            <input type="checkbox" />
+            <span> </span>
+            <span> </span>
+            <span> </span>
+        </div>
+    </nav>
+
+    <!-- login -->
+    <div class="bckground" id="background">
+        <div class="login col-4 col-s-7">
+            <div id="loginForm">
+                <div><img src="../login/user.png" alt=""></div>
+                <div class="form">
+                    <p>Username</p>
+                    <input name="plcholder" type="text" placeholder="Enter Username">
+                </div>
+                <div class="form">
+                    <p>Password</p>
+                    <input type="password" placeholder="Enter password">
+                </div>
+                <div class="loginBtn"><button type="submit">Login</button></div>
+                <div class="cancel">
+                    <button onclick="displaySty('none')">cancel</button>
+                    <p>New here? <a href="#" onclick="change(1)">Sign Up</a></p>
+                </div>
+            </div>
+            <div id="signUpForm">
+                <div><img src="../login/user.png" alt=""></div>
+                <div class="form">
+                    <p>Email</p>
+                    <input type="email" placeholder="Enter Email">
+                </div>
+                <div class="form">
+                    <p>Password</p>
+                    <input type="password" placeholder="Enter password">
+                </div>
+                <div class="form">
+                    <p>Repeat Password</p>
+                    <input type="password" placeholder="Repeat password">
+                </div>
+                <div class="loginBtn"><button type="submit">Sign Up</button></div>
+                <div class="cancel">
+                    <button onclick="displaySty('none')">cancel</button>
+                    <p>Already have an account?<a href="#" onclick="change()">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../Navigation Bar/script.js"></script>
+     
+    <div class="badan-utama">
+        
+        <header>
+            <h2>BUMN Kawasan Industri Buka Lowongan Kerja Bagi Lulusan IT, Tertarik?</h2>
+            <p>Malang, 20/01/2022</p>
+        </header>
+ 
+        <!-- <nav class="navigasi">
+            <ul>
+                <li><a class="active" href="#home">News</a></li>
+                <li><a href="#berita">Edukasi</a></li>
+                <li><a href="#kontak">Health</a></li>
+                <li><a href="#tentang">Life Style</a></li>
+            </ul>
+        </nav> -->
+ 
+        <div class="banner">
+            <img src="gedung.jpg" >
+        </div>
+ 
+        <div class="menu-kiri">
+        </div>
+ 
+        <div class="menu-tengah" style="margin-bottom: 90px;">
+            <div class="kotak">
+                <h3>BUMN Kawasan Industri Buka Lowongan Kerja Bagi Lulusan IT, Tertarik?</h3>
+                <span class="tanggal-posting">
+                    Diposting pada 11.04 WIB, 20 Januari 2022
+                </span>
+ 
+                <img src="programer.jpg" >
+ 
+                <p>
+                    WRI_NEWS.com - Salah satu Badan Usaha Milik Negara (BUMN), PT Kawasan Industri Wijayakusuma (Persero) membuka kesempatan berkarir untuk posisi Teknologi Informasi, khususnya business system analysis. KIW bergerak di bidang pengembangan dan pengelolaan kawasan industri. Kepemilikan saham PT. KIW (Persero) terbagi dalam 85,87% milik Kementerian BUMN; 11,67% milik Pemerintah Provinsi Jawa Tengah dan 2,46% milik Pemerintah Kabupaten Cilacap. KIW di Semarang, Jawa Tengah memiliki infrastruktur lengkap dan terus berkembang serta ketersediaan tenaga kerja yang kompeten dan kompetitif yang sangat mendukung untuk investasi di bidang industri. Dikutip dari laman resminya, Minggu (16/1/2022), BUMN satu ini mencari kandidat dengan kualifikasi lulusan S1 Teknik Informatika atau Manajemen Informasi. "PT Kawasan industri Wijayakusuma (Persero) membuka kesempatan bagi profesional muda yang berpengalaman untuk bergabung sebagai karyawan PT KIW (Persero)," tulis pengumuman tersebut.
+                <br>  Kualifikasi yang Dibutuhkan
+                <br>1. Pria/Wanita 
+                <br>2. Pendidikan minimal S1 Teknik Informatika/Management Informatika
+                <br>3. Usia Maks 35 tahun
+            
+                    </p>
+ 
+                <a class="tombol tombol-lengkap" href="#">Selengkapnya</a>
+            </div>
+        </div>
+ 
+        <!-- komentar -->
+        <div class="main">
+           <h1>Komentar dan Umpan Balik</h1>
+           <marquee width="900">Selamat datang di Tab Kolom komentar dan umpan balik WRI Golang</marquee>
+           <img src = "../Komentar/LOGO POLITEKNIK NEGERI MALANG (1).png"><img src = "../Komentar/pp.jpg"><img src ="../Komentar/logo_jti.png">
+            <div id="content">
+                <p>
+                    <form>
+                    <table>
+                        <tr>
+                          <td>Email :</td>
+                          <td><textarea cols="70" rows="2"></textarea></td>
+                        </tr>
+                        <tr>
+                          <td>Nama :</td>
+                          <td><textarea cols="70" rows="2"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Komentar :</td>
+                            <td><textarea cols="70" rows="5"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>Umpan Balik :</td>
+                            <td>Kurang Puas<input type='radio' />Puas<input type='radio' />Sangat Puas<input type='radio'/></td>
+                        </tr>
+                        <tr>
+                          <td><input type="submit" value="Postkan Komentar"/></td>
+                          <td><input type="reset" value="hapus"></td>
+                         </tr>
+                    </table>
+                    </form>
+                </p>
+                <ul>
+                    <h3>Ketentuan Komentar</h3>
+                    <li>Dilarang menggunakan kata kata sara dan ujaran kebencian</li>
+                    <li>masukkan nama email yang valid</li>
+                    <li>dilarang spam</li>
+                    <li>dilarang menggunakan kata kata provokasi</li>
+                </ul>
+             
+            </div>
+            <!-- <center>Powered by GOLANG WRI@2022</center>
+            <center>All Right Reserved</center> -->
+        </div>
+
+        <footer>
+            @copyright 2022 || by mells
+        </footer>
+    </div>
+ 
+</body>
+</html>

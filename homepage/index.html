@@ -5,78 +5,144 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="indexResp.css">
 </head>
 <body>
-    <div class="marginL" style="padding: 15px;"></div>
-   <div class="body">
+    <!-- navigation bar -->
+    <nav>
+        <div class="logo">
+            <h4>GOLANG</h4>
+        </div>
+
+        <ul>
+            <li><a href="#" >Homepage</a></li>
+            <li><a href="#" onclick="change('hello')">Popular</a></li>
+            <li><a href="#" onclick="displaySty('block', 'aqua')">Login</a></li>
+        </ul>
+        
+        <!-- Toggle Mobile Mode -->
+        <div class="menu-toggle">
+            <input type="checkbox" />
+            <span> </span>
+            <span> </span>
+            <span> </span>
+        </div>
+    </nav>
+
+    <!-- login -->
+    <div class="bckground" id="background">
+        <div class="login col-4 col-s-7">
+            <div id="loginForm">
+                <div><img src="../login/user.png" alt=""></div>
+                <div class="form">
+                    <p>Username</p>
+                    <input name="plcholder" type="text" placeholder="Enter Username">
+                </div>
+                <div class="form">
+                    <p>Password</p>
+                    <input type="password" placeholder="Enter password">
+                </div>
+                <div class="loginBtn"><button type="submit">Login</button></div>
+                <div class="cancel">
+                    <button onclick="displaySty('none')">cancel</button>
+                    <p>New here? <a href="#" onclick="change(1)">Sign Up</a></p>
+                </div>
+            </div>
+            <div id="signUpForm">
+                <div><img src="../login/user.png" alt=""></div>
+                <div class="form">
+                    <p>Email</p>
+                    <input type="email" placeholder="Enter Email">
+                </div>
+                <div class="form">
+                    <p>Password</p>
+                    <input type="password" placeholder="Enter password">
+                </div>
+                <div class="form">
+                    <p>Repeat Password</p>
+                    <input type="password" placeholder="Repeat password">
+                </div>
+                <div class="loginBtn"><button type="submit">Sign Up</button></div>
+                <div class="cancel">
+                    <button onclick="displaySty('none')">cancel</button>
+                    <p>Already have an account?<a href="#" onclick="change()">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../Navigation Bar/script.js"></script>
+
+   <!-- homepage -->
+   <div class="marginL" style="padding: 15px;"></div>
+   <div class="body margT">
        <div class="c col-7">
            <div class="a col-12">
-               <a href=""><img src="image/image2.jpg" alt="" class="col-12 image1">
+               <a href="../Halaman Berita/berita.html"><img src="image/image2.jpg" alt="" class="col-12 image1">
                <h3 class="col-12 margL">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
                 </h3></a>
                 <div class="col-12 lineD col-s-12"><div class="col-11 col-s-11 line"></div></div>
                 <h4 class="margL">Berita Utama Lainnya</h4>
                 <div class="content col-4 col-s-4">
-                    <a href=""><img class="col-12" src="https://cdn0-production-images-kly.akamaized.net/O7XZqQoGaB6dHbr8qnzStL6HrLA=/1231x710/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3903893/original/001666200_1642160658-20220114-Kepanikan-Gempa-Banten-1.jpg" alt="">
+                    <a href="../Halaman Berita/berita.html"><img class="col-12" src="https://cdn0-production-images-kly.akamaized.net/O7XZqQoGaB6dHbr8qnzStL6HrLA=/1231x710/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3903893/original/001666200_1642160658-20220114-Kepanikan-Gempa-Banten-1.jpg" alt="">
                     <p class="col-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></a>
                 </div>
                 <div class="content col-4 col-s-4">
-                    <a href=""><img class="col-12" src="image/image3.jpg" alt="">
+                    <a href="../Halaman Berita/berita.html"><img class="col-12" src="image/image3.jpg" alt="">
                     <p class="col-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></a>
                 </div>
                 <div class="content col-4 col-s-4">
-                    <a href=""><img class="col-12" src="image/image4.jpg" alt="">
+                    <a href="../Halaman Berita/berita.html"><img class="col-12" src="image/image4.jpg" alt="">
                     <p class="col-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></a>
                 </div>
             </div>
             <div class="col-11 titleM">PHOTO STORY</div>
             <div class="content col-4 col-s-4">
-                <a href=""><img class="col-12" src="https://cdn0-production-images-kly.akamaized.net/B4Ou904ktvfWdCkNUKzFGj88-kE=/200x113/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3906679/original/072195100_1642482122-20220118-Pemberkatan-Hewan-Peliharaan-Spanyol-1.jpg">
+                <a href="../Halaman Berita/berita.html"><img class="col-12" src="https://cdn0-production-images-kly.akamaized.net/B4Ou904ktvfWdCkNUKzFGj88-kE=/200x113/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3906679/original/072195100_1642482122-20220118-Pemberkatan-Hewan-Peliharaan-Spanyol-1.jpg">
                 <p class="col-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></a>
             </div>
             <div class="content col-4 col-s-4">
-                <a href=""><img class="col-12"src="https://cdn0-production-images-kly.akamaized.net/4NfONCLap01cXUQkMp7PzBtxJYk=/200x113/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3906556/original/004377900_1642478133-20220118-Tahun-Baru-Pohon-Yahudi-Israel-1.jpg" alt="">
+                <a href="../Halaman Berita/berita.html"><img class="col-12"src="https://cdn0-production-images-kly.akamaized.net/4NfONCLap01cXUQkMp7PzBtxJYk=/200x113/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3906556/original/004377900_1642478133-20220118-Tahun-Baru-Pohon-Yahudi-Israel-1.jpg" alt="">
                 <p class="col-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></a>
             </div>
             <div class="content col-4 col-s-4">
-                <a href=""><img class="col-12"src="https://cdn0-production-images-kly.akamaized.net/U--WHSPx_g0OPISms6qw7Sl1XGA=/200x113/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3907535/original/084025500_1642531569-20220119-Ritual-Pembaptisan-Sungai-Yordan-1.jpg" alt="">
+                <a href="../Halaman Berita/berita.html"><img class="col-12"src="https://cdn0-production-images-kly.akamaized.net/U--WHSPx_g0OPISms6qw7Sl1XGA=/200x113/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3907535/original/084025500_1642531569-20220119-Ritual-Pembaptisan-Sungai-Yordan-1.jpg" alt="">
                 <p class="col-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></a>
             </div>
             <div class="separator col-12"></div>
             <div class="col-12 news ">
-                <a href=""><img src="image/image10.jpg" alt=""></a>
+                <a href="../Halaman Berita/berita.html"><img src="image/image10.jpg" alt=""></a>
                 <div>
-                    <a href=""><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3></a>
+                    <a href="../Halaman Berita/berita.html"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3></a>
                     <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
             <div class="col-12 news">
-                <a href=""><img src="image/image11.jpg" alt=""></a>
+                <a href="../Halaman Berita/berita.html"><img src="image/image11.jpg" alt=""></a>
                 <div>
-                    <a href=""><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3></a>
+                    <a href="../Halaman Berita/berita.html"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3></a>
                     <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
             <div class="col-12 news">
-                <a href=""><img src="image/image12.JPG" alt=""></a>
+                <a href="../Halaman Berita/berita.html"><img src="image/image12.JPG" alt=""></a>
                 <div>
-                    <a href=""><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3></a>
+                    <a href="../Halaman Berita/berita.html"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3></a>
                     <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
             <div class="col-12 news">
-                <a href=""><img src="image/image13.jpg" alt=""></a>
+                <a href="../Halaman Berita/berita.html"><img src="image/image13.jpg" alt=""></a>
                 <div>
-                    <a href=""><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3></a>
+                    <a href="../Halaman Berita/berita.html"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3></a>
                     <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
             <div class="col-12 news">
-                <a href=""><img src="image/image14.jpg" alt=""></a>
+                <a href="../Halaman Berita/berita.html"><img src="image/image14.jpg" alt=""></a>
                 <div>
-                    <a href=""><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3></a>
+                    <a href="../Halaman Berita/berita.html"><h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3></a>
                     <p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
@@ -85,33 +151,33 @@
            <div class="col-s-5 col-12">
                 <h3>Topik Populer</h3>
                 <div class="col-1 col-s-1">#</div>
-                <div class="col-11 col-s-11 list"><a href="">NUSANTARA</a></div>
+                <div class="col-11 col-s-11 list"><a href="../Halaman Berita/berita.html">NUSANTARA</a></div>
                 <div class="col-1 col-s-1">#</div>
-                <div class="col-11 col-s-11 list"><a href="">TELEGRAM</a></div>
+                <div class="col-11 col-s-11 list"><a href="../Halaman Berita/berita.html">TELEGRAM</a></div>
                 <div class="col-1 col-s-1">#</div>
-                <div class="col-11 col-s-11 list"><a href="">OMICRON</a></div>
+                <div class="col-11 col-s-11 list"><a href="../Halaman Berita/berita.html">OMICRON</a></div>
                 <div class="col-1 col-s-1">#</div>
-                <div class="col-11 col-s-11 list"><a href="">BRI LIGA 1</a></div>
+                <div class="col-11 col-s-11 list"><a href="../Halaman Berita/berita.html">BRI LIGA 1</a></div>
                 <div class="col-1 col-s-1">#</div>
-                <div class="col-11 col-s-11 list"><a href="">COVID-19</a></div>
+                <div class="col-11 col-s-11 list"><a href="../Halaman Berita/berita.html">COVID-19</a></div>
                 <div class="col-12" style="height: 20px;"></div>
 
                 <h3 class="col-12 tlStyle" >Cek Fakta</h3>
                 <div class="col-12 cekFakta">
-                   <a href="" class="col-12"><img src="image/image5.jpg" alt="" style="width: 100%;">
+                   <a href="../Halaman Berita/berita.html" class="col-12"><img src="image/image5.jpg" alt="" style="width: 100%;">
                    <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3></a>
                 </div>
                 <div class="newsSide col-12">
                     <img src="image/image7.jpg" alt="">
-                    <a href="" class="col-9 col-s-8"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></a>
+                    <a href="../Halaman Berita/berita.html" class="col-9 col-s-8"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></a>
                 </div>
                 <div class="newsSide col-12">
                     <img src="image/image6.jpg" alt="">
-                    <a href="" class="col-9 col-s-8"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></a>
+                    <a href="../Halaman Berita/berita.html" class="col-9 col-s-8"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></a>
                 </div>
                 <div class="newsSide col-12">
                     <img src="image/image8.jpeg" alt="">
-                    <a href="" class="col-9 col-s-8"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></a>
+                    <a href="../Halaman Berita/berita.html" class="col-9 col-s-8"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></a>
                 </div>
            </div>
            <div class="populer-s col-12 col-s-7">
@@ -120,19 +186,19 @@
                     <img class="col-12" src="image/image9.jpg" alt="">
                     <div class="rank col-12">
                         <div><h1>1</h1></div>
-                        <div><a href=""><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></a></div>
+                        <div><a href="../Halaman Berita/berita.html"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></a></div>
                     </div>
                     <div class="rank col-12">
                         <div><h1>2</h1></div>
-                        <div><a href=""><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></a></div>
+                        <div><a href="../Halaman Berita/berita.html"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></a></div>
                     </div>
                     <div class="rank col-12">
                         <div><h1>3</h1></div>
-                        <div><a href=""><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></a></div>
+                        <div><a href="../Halaman Berita/berita.html"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></a></div>
                     </div>
                     <div class="rank col-12">
                         <div><h1>4</h1></div>
-                        <div><a href=""><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></a></div>
+                        <div><a href="../Halaman Berita/berita.html"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p></a></div>
                     </div>
                 </div>
            </div>

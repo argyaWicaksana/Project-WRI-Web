@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" id="aThing">
+<head id="aThing">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="berita.css">
     <link rel="stylesheet" href="../Navigation Bar/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/67c66657c7.js"></script>
+    <script src="../Komentar/komentar.js"></script>
 </head>
 <body>
     <!-- navigation bar -->
@@ -22,6 +24,12 @@
             <!-- <li><a href="../Login/index.html">Login</a></li> -->
             <li><a href="#" onclick="displaySty('block')">Login</a></li>
         </ul>
+  
+        <!-- Search Bar -->
+        <div class="search_box">
+            <input type="search" placeholder="Search">
+            <span class="fa fa-search"></span>
+        </div>
         
         <!-- Toggle Mobile Mode -->
         <div class="menu-toggle">
@@ -39,15 +47,15 @@
                 <div><img src="../login/user.png" alt=""></div>
                 <div class="form">
                     <p>Username</p>
-                    <input name="plcholder" type="text" placeholder="Enter Username">
+                    <input name="plcholder" type="text" placeholder="Enter your username">
                 </div>
                 <div class="form">
                     <p>Password</p>
-                    <input type="password" placeholder="Enter password">
+                    <input type="password" placeholder="Enter your password">
                 </div>
-                <div class="loginBtn"><button type="submit">Login</button></div>
+                <div class="loginBtn"><button type="submit">Sign In</button></div>
                 <div class="cancel">
-                    <button onclick="displaySty('none')">cancel</button>
+                    <button onclick="displaySty('none')" class="cancelBtn">cancel</button>
                     <p>New here? <a href="#" onclick="change(1)">Sign Up</a></p>
                 </div>
             </div>
@@ -56,6 +64,10 @@
                 <div class="form">
                     <p>Email</p>
                     <input type="email" placeholder="Enter Email">
+                </div>
+                <div class="form">
+                    <p>Username</p>
+                    <input type="email" placeholder="Enter Username">
                 </div>
                 <div class="form">
                     <p>Password</p>
@@ -67,8 +79,8 @@
                 </div>
                 <div class="loginBtn"><button type="submit">Sign Up</button></div>
                 <div class="cancel">
-                    <button onclick="displaySty('none')">cancel</button>
-                    <p>Already have an account?<a href="#" onclick="change()">Login</a></p>
+                    <button onclick="displaySty('none')" class="cancelBtn">cancel</button>
+                    <p>Already have an account?<a href="#" onclick="change()">Sign In</a></p>
                 </div>
             </div>
         </div>
@@ -81,15 +93,6 @@
             <h2>BUMN Kawasan Industri Buka Lowongan Kerja Bagi Lulusan IT, Tertarik?</h2>
             <p>Malang, 20/01/2022</p>
         </header>
- 
-        <!-- <nav class="navigasi">
-            <ul>
-                <li><a class="active" href="#home">News</a></li>
-                <li><a href="#berita">Edukasi</a></li>
-                <li><a href="#kontak">Health</a></li>
-                <li><a href="#tentang">Life Style</a></li>
-            </ul>
-        </nav> -->
  
         <div class="banner">
             <img src="gedung.jpg" >
@@ -131,42 +134,44 @@
                     <table>
                         <tr>
                           <td>Email :</td>
-                          <td><textarea cols="70" rows="2"></textarea></td>
+                          <td><input type="email"  cols="70" rows="2"></td>
                         </tr>
                         <tr>
                           <td>Nama :</td>
-                          <td><textarea cols="70" rows="2"></textarea></td>
+                          <td><input type="text" cols="70" rows="2" id="userName"></td>
                         </tr>
                         <tr>
                             <td>Komentar :</td>
-                            <td><textarea cols="70" rows="5"></textarea></td>
+                            <td><textarea cols="70" rows="5" id="userComment"></textarea></td>
                         </tr>
                         <tr>
                             <td>Umpan Balik :</td>
                             <td>Kurang Puas<input type='radio' />Puas<input type='radio' />Sangat Puas<input type='radio'/></td>
                         </tr>
                         <tr>
-                          <td><input type="submit" value="Postkan Komentar"/></td>
                           <td><input type="reset" value="hapus"></td>
-                         </tr>
+                        </tr>
                     </table>
                     </form>
+                    <button onclick="comment()">Post Komentar</button>
                 </p>
                 <ul>
                     <h3>Ketentuan Komentar</h3>
                     <li>Dilarang menggunakan kata kata sara dan ujaran kebencian</li>
-                    <li>masukkan nama email yang valid</li>
-                    <li>dilarang spam</li>
-                    <li>dilarang menggunakan kata kata provokasi</li>
+                    <li>Masukkan nama email yang valid</li>
+                    <li>Dilarang spam</li>
+                    <li>Dilarang menggunakan kata kata provokasi</li>
                 </ul>
              
             </div>
-            <!-- <center>Powered by GOLANG WRI@2022</center>
-            <center>All Right Reserved</center> -->
         </div>
-
+        <div id="commentSection">
+        </div>
+       
         <footer>
-            @copyright 2022 || by mells
+            <!-- @copyright 2022 || by mells -->
+            Powered by GOLANG WRI@2022 <br>
+            All Right Reserved
         </footer>
     </div>
  

@@ -5,6 +5,7 @@ menuToggle.addEventListener('click', function ( ) {
     nav.classList.toggle('slide');
 });
 
+// login script
 function change(form) {
    if (form) {
       document.getElementById('loginForm').style.display='none'

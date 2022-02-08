@@ -7,6 +7,7 @@
     <title>News</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="indexResp.css">
+    <script src="https://kit.fontawesome.com/67c66657c7.js"></script>
 </head>
 <body>
     <!-- navigation bar -->
@@ -21,6 +22,12 @@
             <li><a href="#" onclick="displaySty('block')">Login</a></li>
             <!-- <li><a href="../Login/index.html">Login</a></li> -->
         </ul>
+  
+        <!-- Search Bar -->
+        <div class="search_box">
+            <input type="search" placeholder="Search">
+            <span class="fa fa-search"></span>
+        </div>
         
         <!-- Toggle Mobile Mode -->
         <div class="menu-toggle">
@@ -38,15 +45,15 @@
                 <div><img src="../login/user.png" alt=""></div>
                 <div class="form">
                     <p>Username</p>
-                    <input name="plcholder" type="text" placeholder="Enter Username">
+                    <input name="plcholder" type="text" placeholder="Enter your username">
                 </div>
                 <div class="form">
                     <p>Password</p>
-                    <input type="password" placeholder="Enter password">
+                    <input type="password" placeholder="Enter your password">
                 </div>
-                <div class="loginBtn"><button type="submit">Login</button></div>
+                <div class="loginBtn"><button type="submit">Sign in</button></div>
                 <div class="cancel">
-                    <button onclick="displaySty('none')">cancel</button>
+                    <button onclick="displaySty('none')" class="cancelBtn">cancel</button>
                     <p>New here? <a href="#" onclick="change(1)">Sign Up</a></p>
                 </div>
             </div>
@@ -55,6 +62,10 @@
                 <div class="form">
                     <p>Email</p>
                     <input type="email" placeholder="Enter Email">
+                </div>
+                <div class="form">
+                    <p>Username</p>
+                    <input type="email" placeholder="Enter Username">
                 </div>
                 <div class="form">
                     <p>Password</p>
@@ -66,8 +77,8 @@
                 </div>
                 <div class="loginBtn"><button type="submit">Sign Up</button></div>
                 <div class="cancel">
-                    <button onclick="displaySty('none')">cancel</button>
-                    <p>Already have an account?<a href="#" onclick="change()">Login</a></p>
+                    <button onclick="displaySty('none')" class="cancelBtn">cancel</button>
+                    <p>Already have an account?<a href="#" onclick="change()">Sign In</a></p>
                 </div>
             </div>
         </div>
@@ -209,9 +220,10 @@
         </div>
    </div> 
    <footer>
-       <div>
-           <p>Made by <br>WRI - Golang Team</p>
-       </div>
+       <p>
+            Powered by GOLANG WRI@2022 <br>
+            All Right Reserved
+       </p>
    </footer>
   </body>
 </html>

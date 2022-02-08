@@ -21,6 +21,7 @@ nav {
 
 nav .logo {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
     letter-spacing: 2px;
 }
 
@@ -34,11 +35,65 @@ nav ul {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 nav ul li a:hover {
     color: black;
+}
+
+/* Search Bar */
+
+nav .search_box {
+    display: flex;
+    margin: auto 0;
+    height: 30px;
+    width: 220px;
+    background: white;
+    line-height: 35px;
+    border-radius: 5px;
+}
+
+nav .search_box input {
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    background-color: white;
+    height: 100%;
+    font-size: 15px;
+    width: 200px;
+    border-radius: 5px;
+}
+nav .search_box span:hover {
+    color: white;
+}
+
+nav .search_box span {
+    color: black;
+    font-size: 12px;
+    background: white;
+    width: 14px;
+    padding: 8px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+nav .search_box span::after {
+    height: 100%;
+    width: 0%;
+    content: '';
+    background: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+nav .search_box span:hover::after {
+    width: 100%;
 }
 
 /* Menu Toggle */
@@ -111,7 +166,9 @@ nav ul li a:hover {
     .menu-toggle {
         display: flex;
     }
+  
     .logo, .menu-toggle{z-index: 2;}
+  
     nav ul {
         position: absolute;
         right: 0;
